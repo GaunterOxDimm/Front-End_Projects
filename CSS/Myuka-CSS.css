@@ -1,0 +1,258 @@
+body {
+  background-color: rgb(180, 224, 133);
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(3%, 100%));
+}
+
+/* Container is header - children are myuka and menu-bar */
+
+#header {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(0%, 100%));
+}
+
+/* START NAVBAR LINKS HOVER */
+
+.nav-links:hover {
+  color: rgb(239, 34, 79);
+  transition: 1s;
+}
+
+/* END NAVBAR LINKS HOVER */
+
+.myuka {
+  justify-self: center;
+  font-size: 40px;
+  color: rgb(18, 113, 230);
+  margin-bottom: 40px;
+}
+.menu-bar {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, minmax(0%, 100%));
+  justify-items: center;
+  align-self: center;
+  background-color: rgb(251, 255, 0);
+  border-radius: 9px;
+  margin-top: 0px;
+}
+/* MENU HAMBURGER */
+.hamburger {
+  display: none;
+}
+/* Container search-bar - children search serie */
+
+.search-bar {
+  display: grid;
+  grid-template-columns: 90% 7%;
+  align-self: center;
+  gap: 0.3%;
+}
+.search {
+  margin-top: 30px;
+}
+#go {
+  width: 53%;
+  justify-content: center;
+}
+
+/* Pancakes Row */
+
+#titre-produit {
+  display: grid;
+  margin-left: 60px;
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+/* BLOC 1 */
+
+.bloc1 {
+  display: grid;
+  grid-template-columns: 50% 47%;
+  gap: 10px;
+  margin-top: 30px;
+}
+#bar-code {
+  justify-self: center;
+}
+.barcode {
+  border: solid 1px black;
+  width: 150px;
+  justify-self: center;
+}
+
+.info {
+  border: solid 1px black;
+  padding-left: 10px;
+}
+
+/* BLOC 2 */
+
+.bloc2 {
+  display: grid;
+  grid-template-columns: 50% 47%;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.pancakes {
+  width: 150px;
+  justify-self: center;
+}
+.list {
+  border: solid 1px black;
+  width: 100%;
+}
+#ingr {
+  margin-left: 10px;
+}
+/* BLOC 3 */
+.bloc3 {
+  display: grid;
+  grid-template-columns: 50% 47%;
+  gap: 10px;
+  margin-top: 30px;
+  width: 100%;
+}
+#maker-bloc {
+  border: solid 1px black;
+  width: 100%;
+}
+.table {
+  border: solid 1px black;
+  width: 100%;
+
+  justify-self: center;
+}
+
+#fab {
+  margin-left: 10px;
+}
+/* Bloc 4 - 3 Pictures*/
+
+.bloc4 {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  gap: 10px;
+  margin-top: 30px;
+}
+.img {
+  width: 180px;
+  margin-left: 15%;
+}
+
+/* Bloc 5 - Commentaires*/
+.bloc5 {
+  display: grid;
+  grid-template-rows: 50% 47%;
+  gap: 10px;
+  margin-top: 30px;
+}
+.comm {
+  width: 97%;
+  border: solid 1px black;
+  height: 80%;
+  padding-left: 10px;
+}
+
+footer {
+  margin-top: 30px;
+  justify-self: end;
+  margin-right: 20px;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 600px) {
+  /* MENU HAMBURGER */
+  .menu-bar {
+    display: none;
+  }
+  .hamburger {
+    display: inline;
+    justify-content: end;
+    width: 10%;
+  }
+  #wrap:target {
+    transform: translate3d(0, 0, 0);
+  }
+  /* SEARCH BAR */
+  .search-bar {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    align-self: center;
+  }
+  .search {
+    margin-top: 30px;
+    width: 80%;
+    justify-self: center;
+  }
+  #go {
+    width: 50%;
+    justify-self: start;
+  }
+  #titre-produit {
+    justify-content: center;
+    padding-right: 60px;
+  }
+  .bloc1 {
+    display: inline;
+    margin-top: 30px;
+  }
+  #bar-code {
+    text-align: center;
+  }
+  .info {
+    text-align: center;
+    border: none;
+  }
+
+  /* BLOC 3 */
+
+  .bloc2 {
+    display: inline;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .pancakes {
+    width: 150px;
+    justify-self: center;
+  }
+  .list {
+    border: solid 1px black;
+    width: 100%;
+    margin-top: 30px;
+    border: none;
+  }
+
+  /* BLOC 3 */
+
+  .bloc3 {
+    display: inline;
+    margin-top: 30px;
+  }
+  #maker-bloc {
+    display: inline;
+    border: solid 1px black;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .table {
+    border: solid 1px black;
+    justify-self: center;
+  }
+
+  /* BLOC 4 */
+
+  .bloc4 {
+    display: inline;
+    margin-top: 30px;
+    padding-right: 23%;
+  }
+  .img {
+    width: 100%;
+  }
+}
